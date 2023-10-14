@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>inspect console</h1>
+    <script>
+        const getUserChoice = userInput =>{
+            userInput = userInput.toLowerCase();
+
+            if (userInput==='rock' || userInput==='paper'||userInput==='scissors'||userInput==='bomb') 
+            {
+                return userInput;
+                
+            } 
+            else {
+                console.log(`invalid input enter by user please choose "rock","paper","scissors".`)
+                
+            }
+        }
+        const getComputerChoice = () => {
+        const randomNumber = Math.floor(Math.random() * 3);
+        
+            switch (randomNumber) {
+                case 0:
+                return 'rock';
+                case 1:
+                return 'paper';
+                case 2:
+                return 'scissors';
+            }
+        };
+           
+
+            const determineWinner = (userChoice,computerChoice) =>{
+                if (userChoice===computerChoice) 
+                {
+                    return "Its a tie :)"
+                    
+                }
+                else if(userChoice=== "rock")
+                {
+                    if(computerChoice==="paper")
+                    {
+                        return "Computer Wins!";
+                    }
+                    else
+                    {
+                        return "You Win!"
+
+                    }
+
+                }
+                else if(userChoice==="paper")
+                {
+                    if(computerChoice==="scissors")
+                    {
+                      
+                        return "Computer Wins!";
+                    }
+                    else
+                    {
+                        return "You Win!"
+
+                    }
+                }
+
+                else if(userChoice==="scissors")
+                {
+                    if(computerChoice==="rock")
+                    {
+                        return "Computer Wins!";
+                    }
+                    else
+                    {
+                        return "You Win!"
+
+                    }
+                }
+                else if(userChoice==="bomb")
+                {
+                        
+                            return "You Win with cheatCode!";
+                        
+                }       
+
+            }
+
+             // Example usage
+             const playGame = () => {
+             const userChoice = getUserChoice("rock"); // You can replace 'rock' with the user's actual choice
+             const computerChoice = getComputerChoice();
+            
+             console.log(`User choice: ${userChoice}`);
+             console.log(`Computer choice: ${computerChoice}`);
+            
+             console.log(determineWinner(userChoice, computerChoice));
+            };
+            // Start the game by calling the playGame function
+            playGame();
+    </script>
+</body>
+</html>

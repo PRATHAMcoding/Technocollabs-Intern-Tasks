@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>inspect console</h1>
+    <script>
+        let myAge=23;       // creating variable which describe my age
+        let earlyYears=2;   //creating variable which describe early years and its value is 2
+        earlyYears *=10.5;  //reassigning value to early age
+       let laterYears= myAge-2; // subtract 2 from myAge to account for the early years
+       let DogYears = laterYears*4; //we multiply the value of laterYears by 4 to calculate the equivalent dog years and store the result in dogYears
+        //document.write(earlyYears,laterYears);
+        console.log(`Early years=  ${earlyYears}`);
+        console.log(`Later years=  ${laterYears}`);
+        console.log(`My Age in Dog Years: ${DogYears}`);
+        let myAgeInDogYears= earlyYears+DogYears;//Adding earlyYears and laterYears to get myAgeInDogYears
+        let myName="PRATHAM";   //Creating a string variable to store my name
+        myName=myName.toLowerCase();    // Replace "YourName" with your actual name
+// Converting myName to lowercase using the toLowerCase method
+        console.log(`My Name: ${myName}`);// Displaying the information using string interpolation
+        console.log(`My name is ${myName}. I am ${myAge} years old in human years which is ${myAgeInDogYears} years old in dog years.`);
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form My Story</title>
+</head>
+<body>
+    <hr>
+    <!-- form tag to create form -->
+    <form action="story.html" method="get">
+       <!-- add label to label the values an inputs to insert the values -->
+        <label for="animal-1">Animal :</label>
+        <input name="animal-1" type="text" placeholder="animal name" required><br>
+
+        <label for="animal-2">Animal :</label>
+        <input name="animal-2" type="text" required><br>
+
+        <label for="animal-3">Animal :</label>
+        <input name="animal-3" type="text" required><br>
+
+        <label for="adj-1">Adjective :</label>
+        <input name="adj-1" type="text" required><br>
+
+        <label for="verb-1">verb :</label>
+        <input name="verb-1" type="text" required><br>
+
+                <!-- type=number -->
+        <label for="number">number :</label>
+        <input name="num-1" type="number" required><br>
+
+                <!-- radio button -->
+        <input name="answer" id="yes" type="radio" value="yes" required>
+        <label for="yes">Yes</label>
+        <input name="answer" id="no" type="radio">
+        <label for="no">No</label><br>
+
+                <!-- option sellection -->
+        <label for="speed" style="position: relative;">
+            <select id="speed" name="speed" required >
+                <option value="faster">Faster</option>
+                <option value="fastest">Fastest</option>
+            </select><br>
+        </label>
+
+        <datalist>
+            <label for="quote"></label>
+            <input id="quote" name="quote" type="text" required list="quote-choices"><br>
+            <option value="winner gets ice cream!"></option>
+        </datalist>
+
+        <label>
+            <textarea id="message" minlength="2500" name="message" required></textarea>
+        </label><br>
+
+
+        <input id="story" type="submit" value="Form My Story!" >
+        
+    </form>
+    
+</body>
+</html>

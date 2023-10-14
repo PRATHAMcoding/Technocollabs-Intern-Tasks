@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>inspect console</h1>
+    <script>
+        // Provided code for generating a random race number
+       
+        const regEarly=true;   //change it for late reg
+        //const regEarly=false;   //change it for late reg
+        let runnerAge=prompt("Enter runners age:");      //change it for getting other response
+        console.log(`Runner age is: ${runnerAge}`)
+        
+       
+        // check runner age and registration time to provide start time of runnner 
+        let startTime="";
+        
+        if (runnerAge>18 && regEarly)
+        {
+           var raceNum=Math.floor(Math.random()*10000);
+            startTime ="9:30 AM";
+            
+        } 
+        else if(runnerAge>18 && !regEarly) 
+        {
+            startTime ="11:00 AM";
+             raceNum=Math.floor(Math.random()*100);
+        }
+        else if(runnerAge<18)
+        {
+            startTime ="Youth registrants run at 12:30 pm (regardless of registration)";
+             raceNum=Math.floor(Math.random()*100);
+            
+        }
+        else
+        {
+            startTime ="see the registration desk";
+             raceNum=Math.floor(Math.random()*100);
+            
+        }
+       
+        // Display registration details
+        console.log(`Race Number: ${raceNum}`);
+        console.log(`Start Time: ${startTime}`);
+
+    </script>
+
+</body>
+</html>
